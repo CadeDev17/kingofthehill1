@@ -1,11 +1,19 @@
+.mainContainer {
+  margin:0;
+  background-color: gray;
+  border-radius: 10px;
+  height: 100%
+}
+
 .connectWallet {
   padding: 30px 30px 0;
-  text-align: right;
 }
 
 .connect {
   padding: 2px 4px;
   width: 100%;
+  border: 2px solid black;
+  border-radius: 15px;
 }
 
 .connect:hover {
@@ -42,40 +50,44 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.description a:hover {
+  color: blue;
+  cursor: pointer;
 }
 
 .description p {
   position: relative;
   margin: 0;
   padding: 1rem;
-  background-color: rgba(var(--callout-rgb), 0.5);
-  border: 1px solid rgba(var(--callout-border-rgb), 0.3);
-  border-radius: var(--border-radius);
+  border: 5px solid black;
+  border-radius: 20px;
 }
 
 .code {
   font-weight: 700;
   font-family: var(--font-mono);
+  border-bottom: 3px solid black
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(25%, auto));
-  width: var(--max-width);
   max-width: 100%;
 }
 
 .card {
   padding: 1rem 1.2rem;
-  border-radius: var(--border-radius);
-  background: rgba(var(--card-rgb), 0);
-  border: 1px solid rgba(var(--card-border-rgb), 0);
-  transition: background 200ms, border 200ms;
+  border-radius: 15px;
+  border: 1px solid white;
+  margin: 0 5px;
 }
 
 .card span {
   display: inline-block;
-  transition: transform 200ms;
 }
 
 .card h2 {
@@ -85,7 +97,6 @@
 
 .card p {
   margin: 0;
-  opacity: 0.6;
   font-size: 0.9rem;
   line-height: 1.5;
   max-width: 30ch;
@@ -127,7 +138,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   margin-bottom: 200px;
 }
 
@@ -146,6 +156,28 @@
   margin-bottom: 30px;
 }
 
+.takeoverSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+
+.takeoverContainer {
+  width: 90%;
+  border: 2px solid white;
+  border-radius: 25px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.takeoverContainer h2 {
+  margin-bottom: 30px;
+}
+
 .info {
   display: flex;
 }
@@ -155,11 +187,15 @@
 }
 
 .btn {
-  padding: 2px 4px;
+  padding: 5px 10px;
+  color: lightgray;
+  background-color: black;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
 }
 
-.takeoverContainer {
+.takeoverTx{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -168,13 +204,12 @@
   margin-top: 20px;
 }
 
-.takeoverContainer input {
+.takeoverTx {
   margin: 0 0 10px 0;
 }
 
-.takeoverContainer button {
-  width: fit-content;
-  padding: 2px 4px;
+.takeoverTx input {
+  margin: 10px 0 10px;
 }
 
 /* Enable hover only on non-touch devices */

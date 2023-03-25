@@ -3,13 +3,13 @@ require("dotenv").config({ path: ".env" });
 
 
 async function main() {
-  const kingOfTheHillContract = await ethers.getContractFactory("KingOfTheHill")
+  const kingOfTheHillContract = await ethers.getContractFactory("KingOfTheHill1")
 
   const deployedKingOfTheHillContract = await kingOfTheHillContract.deploy({ value: ethers.utils.parseEther("0.001") })
 
   await deployedKingOfTheHillContract.deployed()
 
-  console.log("KingOfTheHill Contract: ", deployedKingOfTheHillContract.address)
+  console.log("KingOfTheHill1 Contract: ", deployedKingOfTheHillContract.address)
 }
 
 // Async Sleep function

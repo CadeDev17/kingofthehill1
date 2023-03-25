@@ -48,6 +48,7 @@ export default function Home() {
   const getCurrentKing = async () => {
     try {
       const provider = await getProviderOrSigner()
+      console.log(KING_OF_THE_HILL_CONTRACT_ADDRESS)
       const KingOfTheHillContract = new Contract(KING_OF_THE_HILL_CONTRACT_ADDRESS, KING_OF_THE_HILL_ABI, provider)
       const currentKing = await KingOfTheHillContract._king()
       setCurrentKing(currentKing);
@@ -233,10 +234,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className={styles.infoSection}>
-          <div className={styles.infoContainer}>
+        <section className={styles.takeoverSection}>
+          <div className={styles.takeoverContainer}>
             <h2>Execute your attack!</h2>
-            <div className={styles.takeoverContainer}>
+            <div className={styles.takeoverTx}>
               <label>Enter your bribe amount:</label>
               <input type="number" placeholder="Enter ETH Amount" name="takeoverAmount" onChange={(e) => setCurrentTakeoverValue(e.target.value)} />
               <button className={styles.btn} onClick={() => Takeover(currentTakeoverValue)}>TAKEOVER</button>
